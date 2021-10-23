@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Title</title>
+		<!--Font Styles-->
+		
+		<!-- external CSS link -->
+		<!--<link rel="stylesheet" href="css/normalize.css">-->
+		<!--<link rel="stylesheet" href="css/reset.css">-->
+		<link rel="stylesheet" href="css/styleTwo.css">
+	</head>
+	<body>
+        <div class ="container fill">
+            <div class="main">
+                <div class="head">
+                    <p>Current Employees</p>
+                    <div>
+                        <a class="viewCurrent" href= "/">New Employee</a>
+                    </div>
+                </div>
+            <table class="table-grid">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Pronouns</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i=0; i<employees.length; i++) {%>
+                    <tr>
+                        <td><%= employees[i].firstName %></td>
+                        <td><%= employees[i].lastName %></td>
+                        <td><%= employees[i].email %></td>
+                        <td><%= employees[i].phone %></td>
+                        <td><%= employees[i].pronoun %></td>
+                        <td>
+                            <a class="edit" href="/update?id=<%=employees[i]._id%>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a class="trash"><i class="fa fa-trash" id="<%=employees[i]._id%>" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+        </div>
+		<script src="https://kit.fontawesome.com/c0e668a8ad.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
+

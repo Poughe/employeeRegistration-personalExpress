@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Your description goes here" />
+    <meta name="keywords" content="one, two, three" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Employee Registration</title>
+    <!--Font Styles-->
+
+    <!-- external CSS link -->
+    <!--<link rel="stylesheet" href="css/normalize.css">-->
+    <!--<link rel="stylesheet" href="css/reset.css">-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container fill">
+      <div class="main">
+        <div class="head">
+          <p>Employee Registration Form</p>
+        </div>
+        <div class="form fill">
+          <form action="/employees" method="POST">
+            <p class="name">FIRST NAME :</p>
+            <div>
+              <input
+                type="text"
+                name="fname"
+                placeholder="First Name"
+                class="text-input"
+              />
+            </div>
+            <p class="name">LAST NAME :</p>
+            <div>
+              <input
+                type="text"
+                name="lname"
+                placeholder="Last Name"
+                class="text-input"
+              />
+            </div>
+            <p class="name">EMAIL :</p>
+            <div>
+              <input
+                type="email"
+                name="uid"
+                placeholder="Email"
+                class="text-input"
+              />
+            </div>
+            <p class="name">PHONE :</p>
+            <div>
+              <input
+                type="text"
+                name="phone"
+                placeholder="123-456-7890"
+                class="text-input"
+              />
+            </div>
+            <div class="dropBox">
+              <label class="pronouns">Pronouns :</label>
+              <select name="pronoun">
+                <option value="Default">Select</option>
+                <option value="He/Him">He/Him</option>
+                <option value="She/Her">She/Her</option>
+                <option value="They/Them">They/Them</option>
+              </select>
+              <!-- <span class="pronouns">Pronouns :</span> -->
+              <!-- <input type="checkbox" name="ge" class="pronoun" />He/His
+              <input type="checkbox" name="ge" class="pronoun" />She/Her
+              <input type="checkbox" name="ge" class="pronoun" />They/Them -->
+            </div>
+            <div>
+              <button type="submit" name="sb" class="submit">Submit Registration</button>
+            </div>
+            <div>
+              <a class="viewCurrent" href="/view">View Current Employees</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/c0e668a8ad.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
